@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Upload your selfie to generate a mood-based playlist"
+    />
+    <title>Upload Selfie - AI Mood Playlist Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="main-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="upload.html" class="active">Upload Selfie</a></li>
+          <li><a href="playlist.html">Your Playlist</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="upload-section">
+        <h1>Upload Your Selfie</h1>
+        <form action="playlist.html" method="get" class="upload-form">
+          <fieldset>
+            <legend>Photo Upload</legend>
+
+            <div class="form-group">
+              <label for="photo">Choose your selfie:</label>
+              <input
+                type="file"
+                id="photo"
+                name="photo"
+                accept="image/*"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="name">Your Name:</label>
+              <input type="text" id="name" name="name" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address:</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+
+            <fieldset class="preferences">
+              <legend>Music Preferences</legend>
+
+              <div class="checkbox-group">
+                <input type="checkbox" id="pop" name="genre" value="pop" />
+                <label for="pop">Pop</label>
+
+                <input type="checkbox" id="rock" name="genre" value="rock" />
+                <label for="rock">Rock</label>
+
+                <input type="checkbox" id="jazz" name="genre" value="jazz" />
+                <label for="jazz">Jazz</label>
+              </div>
+            </fieldset>
+
+            <div class="form-group">
+              <label for="mood-range">Current Mood (1-10):</label>
+              <input
+                type="range"
+                id="mood-range"
+                name="mood"
+                min="1"
+                max="10"
+                value="5"
+              />
+            </div>
+          </fieldset>
+
+          <button type="submit" class="submit-button">Generate Playlist</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Use</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2025 AI Mood Playlist Generator. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
